@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+</head>
+<body>
+
+
+{% block content %}
+<h3 style="font-family: arial; text-align: center; margin-right: 30px; margin-top: 100px">Login</h3>
+<br>
+
+<form method="post" style="">
+
+        {% csrf_token %}
+
+
+    <div style="text-align: center;">
+        {% for i in form %}
+        <div style="display: flex; margin-left: 440px">
+            <div style="width: 150px; text-align: start">
+                {{ i.label }}:
+            </div>
+            <div style="">
+                <p>{{ i }}</p>
+            </div>
+        </div>
+        <div class="form-error">{{ i.errors }}</div>
+        {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 20px; margin-right: 20px">
+        <button type="submit" class="btn btn-warning">
+            Authorization
+
+        </button>
+    </div>
+ </form>
+{% endblock %}
+</body>
+</html>
