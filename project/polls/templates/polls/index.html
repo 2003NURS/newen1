@@ -6,13 +6,12 @@
 </head>
 <body>
 {% block content %}
-<button><a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'emailattachment' %}">Send message</a></button>
 {% if request.user.is_authenticated %}
 <a class="me-3 py-2 text-dark text-decoration-none">{{ user.username }}</a>
 <a class="me-3 py-2 text-dark text-decoration-none" href="">|</a>
 <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'logout' %}">Logout</a>
 
-
+aigerim
 
 {% else %}
 <a class="me-3 py-2 text-dark text-decoration-none" href="registration">Registration</a>
@@ -24,9 +23,10 @@
     <h1>{{cat.title}}</h1>
     {{cat.content}}
 {%endfor%}
-
-
-    <button >Send message</button>
+<!--<div>-->
+<!--<button><a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'emailattachment' %}">Send message</a></button>-->
+<!--</div>-->
+<!--    <button >Send message</button>-->
 </div>
 {% endblock %}
 
